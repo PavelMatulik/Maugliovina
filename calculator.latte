@@ -1,0 +1,49 @@
+<head>
+    <title>Maugliho web</title>
+</head>
+
+<body>
+
+<h1>Mauglího "kalkulovací" okénko</h1>
+
+
+<p>
+<h3>Výpočet obsahu obdelníku</h3>
+    <form method="post" action="#">
+        <label for="inputWidth">Šířka(v cm)</label>
+        <input type="number" step=0.01 min="0" name="rectangleWidth" id="inputWidth">
+        <label for="inputLength">Délka(v cm)</label>
+        <input type="number" step=0.01 min="0" name="rectangleLength" id="inputLength">
+        <input type="submit" value="Odeslat"><br>
+    </form>
+    Zadané parametry obdelníku: Šířka: <b>{$rectangleWidth}</b> Délka: <b>{$rectangleLength}</b> <br>
+    Obsah obdelníku je: <b>{$rectangleResult} cm2</b><br><br>
+
+</p>
+<p>
+<h3>Výpočet obsahu čtverce</h3>
+    <form method="post" action="#">
+        <label for="inputSquareWidth">Šířka(v cm)</label>
+        <input type="number" step=0.01 min="0" name="squareWidth" id="inputSquareWidth">
+        <input type="submit" value="Odeslat"><br>
+    </form>
+    Obsah čtverce je: <b>{$squareResult} cm2</b><br><br>
+        </p>
+
+</p>
+<p>
+<h3>Výpočet obsahu kružnice</h3>
+<form method="post" action="#">
+    <label for="inputRingRadius">Poloměr kružnice(v cm)</label>
+    <input type="number" step=0.01 min="0" name="ringRadius" id="inputRingRadius">
+    <input type="submit" value="Odeslat"><br>
+</form>
+Obsah kruhu je: <b>{$ringResult} cm2</b><br><br>
+</p>
+
+
+        <ol>
+    {*<li n:foreach="$items as $item"><img src="{$item['thumbnailUrl']}"/>{$item['title']|webalize}</li>*}
+</ol>
+
+</body>

@@ -1,0 +1,32 @@
+<head>
+    <title>Maugliho web</title>
+</head>
+
+<body background="pozadi.gif" bgcolor="black" text="#adff2f">
+
+<h1>Mauglího "programovací" okénko</h1>
+<p>
+    <h3>Dnes je {$numberDay}.{$thisMonth} a je {$today} </h3>
+</p>
+<p><b>{$today}</b> = {$greetings}</p>
+<br>
+<p>
+<h3>Zkusme ten TODO fist</h3>
+    <form method="post" action="#">
+        <label for="imputNote">Poznámka</label>
+        <input type="text" name="Note" id="imputNote">
+        <input type="submit" value="Odeslat">
+        {*<input type="submit" value="Přečíst">*}
+        {*<input type="text" name="Output">*}
+    </form><br>
+{*Poznámky: {$data}*}
+</p>
+Poznámky:
+<div n:if="isset($errorFileMsg)">{$errorFileMsg}</div>
+<div class="custom-select" style="width:200px;">
+    <select>
+        {foreach $data as $key =>$row }
+            <option value={$key}>{$row}</option>
+        {/foreach}
+    </select>
+</body>
